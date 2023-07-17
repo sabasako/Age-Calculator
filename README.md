@@ -25,7 +25,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+Light Mode
+
+<img src="./Screenshots/light-mode.png" alt="Calculator app light mode" width="400px"/>
+
+Dark Mode
+
+<img src="./Screenshots/dark-mode.png" alt="Calculator app dark mode" width="400px"/>
 
 ### Links
 * [Solution](https://github.com/sabasako/Age-Calculator/)
