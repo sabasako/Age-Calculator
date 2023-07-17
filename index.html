@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+
+    <title>Frontend Mentor | Age calculator app</title>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <section class="section-body">
+      <form action="#" class="form">
+        <fieldset>
+          <label class="label-text label-day" for="day">DAY</label>
+          <input
+            class="input-day"
+            type="text"
+            id="day"
+            name="day"
+            placeholder="DD"
+          />
+          <label class="error-text error-day" for="day"
+            >This field is required</label
+          >
+        </fieldset>
+        <fieldset>
+          <label class="label-text label-month" for="month">MONTH</label>
+          <input
+            class="input-month"
+            type="text"
+            id="month"
+            name="month"
+            placeholder="MM"
+          />
+          <label class="error-text error-month" for="month"
+            >This field is required</label
+          >
+        </fieldset>
+        <fieldset>
+          <label class="label-text label-year" for="year">YEAR</label>
+          <input
+            class="input-year"
+            type="text"
+            id="year"
+            name="year"
+            placeholder="YYYY"
+          />
+          <label class="error-text error-year" for="year"
+            >This field is required</label
+          >
+        </fieldset>
+      </form>
+      <button>
+        <img src="assets/images/icon-arrow.svg" alt="" />
+      </button>
+
+      <section class="section-guess">
+        <p class="guess-text">
+          <span class="guess-highlight guess-year">--</span> years
+        </p>
+        <p class="guess-text">
+          <span class="guess-highlight guess-month">--</span> months
+        </p>
+        <p class="guess-text">
+          <span class="guess-highlight guess-day">--</span> days
+        </p>
+
+        <ion-icon
+          class="icon light-logo hidden"
+          name="sunny-outline"
+        ></ion-icon>
+        <ion-icon class="icon dark-logo" name="moon"></ion-icon>
+      </section>
+    </section>
+    <footer class="copyright">
+      Copyright &copy;
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      sabasako<a
+        href="https://github.com/sabasako/"
+        class="github-logo-link"
+        target="_blank"
+        ><ion-icon class="github-logo" name="logo-github"></ion-icon
+      ></a>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
