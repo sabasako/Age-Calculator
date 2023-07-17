@@ -141,6 +141,19 @@ function checkError() {
   emptyError("year", errorYear);
 }
 
+// Age animation
+function ageAnimation(num, max, element) {
+  if (num <= max) {
+    element.textContent = num;
+    setTimeout(
+      function () {
+        ageAnimation(num + 1, max, element);
+      },
+      max > 100 ? 10 : 30
+    );
+  }
+}
+
 // Keyboard functionality;
 const keyboard = (e) => {
   if (e.key === "Enter") calculateAge();
@@ -173,21 +186,21 @@ function calculateAge() {
 
   // calculates age
   if (monthValue > currentMonth && dayValue <= currentDay) {
-    guessYear.textContent = currentYear - yearValue - 1;
-    guessMonth.textContent = 12 - (monthValue - currentMonth);
-    guessDay.textContent = currentDay - dayValue;
+    ageAnimation(1, currentYear - yearValue - 1, guessYear);
+    ageAnimation(1, 12 - (monthValue - currentMonth), guessMonth);
+    ageAnimation(1, currentDay - dayValue, guessDay);
   } else if (monthValue >= currentMonth && dayValue > currentDay) {
-    guessYear.textContent = currentYear - yearValue - 1;
-    guessMonth.textContent = 12 - (monthValue - currentMonth) - 1;
-    guessDay.textContent = 31 - (dayValue - currentDay);
+    ageAnimation(1, currentYear - yearValue - 1, guessYear);
+    ageAnimation(1, 12 - (monthValue - currentMonth) - 1, guessMonth);
+    ageAnimation(1, 31 - (dayValue - currentDay), guessDay);
   } else if (monthValue <= currentMonth && dayValue <= currentDay) {
-    guessYear.textContent = currentYear - yearValue;
-    guessMonth.textContent = currentMonth - monthValue;
-    guessDay.textContent = currentDay - dayValue;
+    ageAnimation(1, currentYear - yearValue, guessYear);
+    ageAnimation(1, currentMonth - monthValue, guessMonth);
+    ageAnimation(1, currentDay - dayValue, guessDay);
   } else if (monthValue < currentMonth && dayValue > currentDay) {
-    guessYear.textContent = currentYear - yearValue;
-    guessMonth.textContent = currentMonth - monthValue - 1;
-    guessDay.textContent = 31 - (dayValue - currentDay);
+    ageAnimation(1, currentYear - yearValue, guessYear);
+    ageAnimation(1, currentMonth - monthValue - 1, guessMonth);
+    ageAnimation(1, 31 - (dayValue - currentDay), guessDay);
   }
 }
 
